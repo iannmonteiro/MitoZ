@@ -20,3 +20,10 @@ apt --fix-broken install
 
 ```sudo apt-get -f install```
 
+#Rodando MitoZ com dados fasta | alterar para o local onde está o MitoZ | Fazer o mesmo para onde está o fasta, mas caso dê error, pode colocar o fasta no /root e rodar com comando sudo [...]
+#Alterações: outprefix com nome do gênero; nome do fasta; nome da espécie conforme o fasta
+```
+singularity exec /home/iann/Downloads/MItoz/MitoZ_v3.4.sif mitoz annotate --outprefix Dekeyseria --thread_number 12 --fastafiles dekeyseria.fasta --species_name D_amazonica --genetic_code 2 --clade Chordata
+```
+#O arquivo fasta precisa vir iniciando assim. Não exceder 13 caracteres
+```">D_amazonica topology=circular"```
